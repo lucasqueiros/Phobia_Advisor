@@ -9,7 +9,7 @@ a ocorrencia no vídeo em questão e após análise o programa retorna uma respo
 deve ou não assistir o conteúdo.
 
 ## Esquema 
-![](imagens/Phobia_Advisor.png)
+![](Phobia_Advisor.png)
 
 ## Funcionalidades
 - Transcrição de áudio via **Whisper** (OpenAI)
