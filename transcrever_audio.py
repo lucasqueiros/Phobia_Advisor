@@ -3,14 +3,16 @@ from dotenv import load_dotenv, find_dotenv
 
 _ = load_dotenv(find_dotenv())
 
-client = openai.Client()
+audio_path = "/home/lucasqueiros/Documentos/Phobia_Advisor/data/audio.mp3"
 
-audio = open('audio.mp3', 'rb')
+def transcrever_audio(audio_path):
+    client = openai.Client()
+    audio = open(audio_path, 'rb')
+    transcricao = client.audio.transcriptions.create(
+        model='whisper-1',
+        file=audio,
+        response_format='srt' #srt gera uma saida em formato de legenda, com tempo de inicio e fim
+    )
+    return transcricao
 
-transcricao = client.audio.transcription.create(
-    model='whisper',
-    file=audio,
-    response_format='srt' #srt gera uma saida em formato de legenda, com tempo de inicio e fim
-)
-
-print(transcricao)
+print(transcrever_audio(audio_path))
