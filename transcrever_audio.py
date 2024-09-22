@@ -13,6 +13,8 @@ def transcrever_audio(audio_path):
         file=audio,
         response_format='srt' #srt gera uma saida em formato de legenda, com tempo de inicio e fim
     )
+    with open('data/transcricao.txt', 'w') as f:
+        f.write(transcricao)
     return transcricao
 
 #print(transcrever_audio(audio_path))
