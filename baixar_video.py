@@ -1,7 +1,7 @@
 import sys
 from pytubefix import YouTube
 
-url_video = "https://www.youtube.com/watch?v=DuvXmEaH_rI"
+#url_video = "https://www.youtube.com/shorts/z6MdUwuCxrM"
 
 def baixar_video(url, proxies=None, use_oauth=False, allow_oauth_cache=True):
     # Instancia o objeto YouTube com callbacks e proxies
@@ -19,7 +19,7 @@ def baixar_video(url, proxies=None, use_oauth=False, allow_oauth_cache=True):
 
     # Faz o download para o diretório 'data'
     output_path = 'data'
-    ys.download(output_path=output_path, filename='video')
+    ys.download(output_path=output_path, filename='video.mp4')
 
     # Retorna o caminho completo do arquivo baixado
     return f'{output_path}/{ys.default_filename}'
@@ -43,4 +43,4 @@ def complete_func(stream, file_path):
     print(f'\nDownload completo! O arquivo foi salvo em: {file_path}')
     # Aqui você pode adicionar o que quiser fazer após o download, como processar o vídeo
 
-baixar_video(url_video)
+#baixar_video(url_video)

@@ -1,6 +1,6 @@
 import moviepy.editor as mp
 
-video_path = "/home/lucasqueiros/Documentos/Phobia_Advisor/data/video"
+#video_path = "data/video.mp4"
 
 def extrair_audio(video_path):
     audio = mp.VideoFileClip(video_path).audio
@@ -8,4 +8,4 @@ def extrair_audio(video_path):
     audio.write_audiofile(audio_path)
     return audio_path
 
-extrair_audio(video_path)
+#extrair_audio(video_path)

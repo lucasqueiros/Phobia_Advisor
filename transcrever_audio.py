@@ -3,7 +3,7 @@ from dotenv import load_dotenv, find_dotenv
 
 _ = load_dotenv(find_dotenv())
 
-audio_path = "/home/lucasqueiros/Documentos/Phobia_Advisor/data/audio.mp3"
+#audio_path = "data/audio.mp3"
 
 def transcrever_audio(audio_path):
     client = openai.Client()
@@ -15,4 +15,4 @@ def transcrever_audio(audio_path):
     )
     return transcricao
 
-print(transcrever_audio(audio_path))
+#print(transcrever_audio(audio_path))

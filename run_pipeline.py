@@ -7,12 +7,13 @@ def run_pipeline(link, fobia):
     video_path = baixar_video(link)
      
     #extracao do audio
-    audio_path = extrair_audio(link)
+    audio_path = extrair_audio(video_path)
     
     #transcrever audio
     transcricao = transcrever_audio(audio_path)
+    print(transcricao)
     
-    return transcricao
+    return "finish output"
     #executar agente1, analise da transcrição em busca da fobia
     #output = run_agent1(audio_path, fobia)
     
