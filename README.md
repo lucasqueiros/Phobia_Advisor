@@ -20,7 +20,6 @@ deve ou não assistir o conteúdo.
 - **Linguagem**: Python
 - **Bibliotecas**:
     - OpenAI
-    - AutoGen - https://microsoft.github.io/autogen/docs/Getting-Started
-    - StreamLit - https://docs.streamlit.io/
+    - Gradio
     - BLIP
     - pyTube

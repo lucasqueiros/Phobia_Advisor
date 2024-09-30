@@ -14,17 +14,31 @@ def run_pipeline(link, fobia):
         # download do video
         video_path = baixar_video(link)
         
+        print("video baixado")
+        
         # extracao do audio
         audio_path = extrair_audio(video_path)
+        
+        print("audio extraido")
         
         # transcrever audio
         transcricao = transcrever_audio(audio_path)
         
-        lista_frames = lista_frames(transcricao, fobia)
+        print("transcrição feita")
         
-        capture_frames(video_path, lista_frames)
+        frames_list = lista_frames(transcricao, fobia)
+        
+        print("lista deframes e resumo feitos")
+        
+        capture_frames(video_path, frames_list[0])
+        
+        print("frames capturados")
         
         processar_imagens('data/frames/', 'data/legendas.txt')
         
-        return analise_final.decisao_llm(lista_frames, transcricao, fobia)
+        print("imagens processadas no modelo blip")
+        
+        return analise_final.decisao_llm(frames_list, transcricao, fobia)
+    
+    
     

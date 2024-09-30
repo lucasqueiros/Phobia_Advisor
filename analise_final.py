@@ -10,7 +10,6 @@ with open('/home/lucasqueiros/Documentos/Phobia_Advisor/data/resumo.txt', 'r', e
 with open('/home/lucasqueiros/Documentos/Phobia_Advisor/data/legendas.txt', 'r', encoding='utf-8') as file:
     legenda = file.read()
 
-fobia = "cobra"
 
 def decisao_llm(resumo, legenda, fobia):
     prompt = f"""Baseado no resumo e na legenda dos frames analisados, tome uma decisão sobre se o usuario
@@ -36,5 +35,3 @@ def decisao_llm(resumo, legenda, fobia):
         file.write(resposta)
 
     return resposta
-
-print(decisao_llm(resumo, legenda, fobia))

@@ -40,8 +40,3 @@ def processar_imagens(pasta, arquivo_saida):
                     print(f"Erro ao processar {filename}: {str(e)}")
 
     print(f"Legendas salvas em {arquivo_saida}")
-
-# Exemplo de uso
-arquivo_saida = "data/legendas.txt"
-
-processar_imagens(path, arquivo_saida)

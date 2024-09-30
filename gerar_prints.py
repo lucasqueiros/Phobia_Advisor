@@ -2,6 +2,9 @@ import cv2
 from PIL import Image
 
 def capture_frames(video_path, timestamps):
+    print(timestamps)
+    print(type(timestamps))    
+    print ("Capturando frames...")
     # Abrir o vídeo
     video = cv2.VideoCapture(video_path)
     
