@@ -5,6 +5,7 @@ _ = load_dotenv(find_dotenv())
 
 
 def transcrever_audio(audio_path):
+    
     client = openai.Client()
     audio = open(audio_path, 'rb')
     transcricao = client.audio.transcriptions.create(

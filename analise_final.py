@@ -4,10 +4,10 @@ from dotenv import load_dotenv, find_dotenv
 # Carrega variáveis de ambiente do arquivo .env
 _ = load_dotenv(find_dotenv())
 
-with open('/home/lucasqueiros/Documentos/Phobia_Advisor/data/resumo.txt', 'r', encoding='utf-8') as file:
+with open('data/resumo.txt', 'r', encoding='utf-8') as file:
     resumo = file.read()
 
-with open('/home/lucasqueiros/Documentos/Phobia_Advisor/data/legendas.txt', 'r', encoding='utf-8') as file:
+with open('data/legendas.txt', 'r', encoding='utf-8') as file:
     legenda = file.read()
 
 
@@ -31,7 +31,7 @@ def decisao_llm(resumo, legenda, fobia):
 
     resposta = response.choices[0].message.content
 
-    with open('/home/lucasqueiros/Documentos/Phobia_Advisor/data/decisao.txt', 'w', encoding='utf-8') as file:
+    with open('data/decisao.txt', 'w', encoding='utf-8') as file:
         file.write(resposta)
 
     return resposta

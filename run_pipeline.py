@@ -30,7 +30,7 @@ def run_pipeline(link, fobia):
         
         print("lista deframes e resumo feitos")
         
-        capture_frames(video_path, frames_list[0])
+        capture_frames(video_path, frames_list)
         
         print("frames capturados")
         

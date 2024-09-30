@@ -1,5 +1,6 @@
 import openai
 from dotenv import load_dotenv, find_dotenv
+import ast
 
 # Carrega variáveis de ambiente do arquivo .env
 _ = load_dotenv(find_dotenv())
@@ -33,6 +34,9 @@ def lista_frames(conteudo, fobia):
         file.write(resposta)
     
     
-    print(resposta)
-    return list(resposta)
+    lista = eval(resposta)
+   
+    lista_float = [float(i) for i in lista]
+    
+    return lista_float
 
