@@ -1,4 +1,4 @@
-# Fobia Video Checker
+# Fobia Advisor
 
 Este é um sistema de análise de vídeos do YouTube, projetado para ajudar os usuários a evitar conteúdos relacionados a fobias. O usuário insere o link de um vídeo do YouTube e especifica uma fobia que deseja evitar. A aplicação processa o vídeo, analisa o conteúdo e retorna uma recomendação sobre se o vídeo contém ou não trechos relacionados à fobia especificada.
 
@@ -26,8 +26,6 @@ Este é um sistema de análise de vídeos do YouTube, projetado para ajudar os u
 `BLIP_model.py`: Usa o modelo BLIP para legendar os frames.  
 `analise_final.py`: Recebe todos os outros outputs e envia para a LLM decidir se o usuário deve ou não assistir o vídeo.
 `requirements.txt`: Lista das bibliotecas necessárias para rodar a aplicação.  
-
-
 
 
 ## Requisitos

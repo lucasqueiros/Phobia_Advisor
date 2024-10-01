@@ -22,7 +22,7 @@ def decisao_llm(resumo, legenda, fobia):
     ####
     {legenda}
     #####
-    Pense passo a passo. Primeiro, analise o resumo e a legenda. Depois, tome uma decisão baseada nas analises feitas."""
+    Pense passo a passo. Primeiro, analise o resumo e a legenda e tome uma decisão."""
 
     response = openai.chat.completions.create(
         model="gpt-3.5-turbo",
