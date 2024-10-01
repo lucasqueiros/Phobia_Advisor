@@ -1,4 +1,4 @@
-# Fobia Advisor
+# Phobia Advisor
 
 Este é um sistema de análise de vídeos do YouTube, projetado para ajudar os usuários a evitar conteúdos relacionados a fobias. O usuário insere o link de um vídeo do YouTube e especifica uma fobia que deseja evitar. A aplicação processa o vídeo, analisa o conteúdo e retorna uma recomendação sobre se o vídeo contém ou não trechos relacionados à fobia especificada.
 
